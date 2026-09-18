@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mennatallah Abouelenin — A Portfolio Kingdom</title>
+<meta name="description" content="Portfolio of Mennatallah Abouelenin — Computer Engineer working across mobile, full-stack, AI, and game development.">
+
+<!-- Open Graph (LinkedIn, Facebook, Slack, Discord, etc.) -->
+<meta property="og:title" content="Mennatallah Abouelenin — Portfolio">
+<meta property="og:description" content="Computer Engineer working across mobile, full-stack, AI, and game development. Explore the kingdom.">
+<meta property="og:image" content="https://domain.com/assets/og-preview.png">
+<meta property="og:url" content="https://domain.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mennatallah Abouelenin — Portfolio">
+<meta name="twitter:description" content="Computer Engineer working across mobile, full-stack, AI, and game development.">
+<meta name="twitter:image" content="https://domain.com/assets/og-preview.png">
+
+<link rel="icon" type="image/svg+xml" href="assets/castle.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div id="introName" class="display">Mennatallah Abouelenin</div>
+  </div>
+
+  <!-- FAIRY DUST CANVAS -->
+  <canvas id="fairyCanvas" style="position:fixed;inset:0;pointer-events:none;z-index:120;"></canvas>
+
+  <!-- STAR COUNTER -->
+  <div id="starCounter">★ Stars: <span id="starCount">0</span>/<span id="starTotal">?</span></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1 id="heroName"></h1>
+    <p id="heroSub">Adventurer · Developer · Storyteller</p>
+    <button id="scrollHint">↓ enter the library ↓</button>
+  </section>
+
+  <!-- LIBRARY -->
+  <section id="library">
+    <img id="ceilingCandle" src="assets/candle.svg" alt="" aria-hidden="true">
+    <h2 id="libraryTitle">The Library</h2>
+    <div id="shelf">
+      <div class="shelfRow" id="shelfRow1"></div>
+      <div class="shelfRow" id="shelfRow2"></div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modalOverlay">
+    <div id="bookPage">
+      <button id="closeModal">✕</button>
+      <div id="bookContent"></div>
+    </div>
+  </div>
+
+  <!-- MINIGAME -->
+  <div id="gameOverlay" aria-hidden="true">
+    <button id="closeGame" aria-label="Close the vault">✕</button>
+
+    <div id="gameIntro" class="gameScreen">
+      <svg class="gameSeal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="32" cy="32" r="3" fill="currentColor"/>
+        <path d="M32 12 L35.5 28 L32 32 L28.5 28 Z" fill="currentColor"/>
+        <path d="M32 52 L35.5 36 L32 32 L28.5 36 Z" fill="currentColor"/>
+        <path d="M12 32 L28 28.5 L32 32 L28 35.5 Z" fill="currentColor"/>
+        <path d="M52 32 L36 28.5 L32 32 L36 35.5 Z" fill="currentColor"/>
+      </svg>
+      <h3 id="introTitle">A treasure lies protected by a memory lock.</h3>
+      <p id="introSub">Match every pair to break the seal and claim what's inside.</p>
+      <button id="playBtn" class="fantasyBtn" type="button">Play</button>
+    </div>
+
+    <div id="gamePlay" class="gameScreen">
+      <div id="gameMsg">Flip the tiles and find every matching pair.</div>
+      <div id="moveCounter">Moves: 0</div>
+      <div id="cardGrid" role="group" aria-label="Memory matching board"></div>
+    </div>
+
+    <div id="treasureReveal" class="gameScreen">
+      <h3>The seal is broken</h3>
+      <p id="treasureMoves"></p>
+      <div id="chestWrap">
+        <div id="chestGlow"></div>
+        <button id="scrollPopup" type="button" aria-label="Open the treasure scroll">
+          <img src="assets/scroll.svg" alt="">
+        </button>
+        <div id="chestIcon"><img src="assets/chest.svg" alt="Treasure chest"></div>
+      </div>
+      <p id="treasureHint">Click the scroll to read it</p>
+      <button id="readScrollBtn" class="fantasyBtn" type="button">Open the Scrolls</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
