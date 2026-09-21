@@ -311,16 +311,17 @@ h1,h2,h3,.display{
   display:inline-block;
 }
 @media (max-width:600px){
-  #bookPage .poemHead{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-  }
   #bookPage .poemQuill{
-    position:static;
-    width:80px;
-    margin:0 auto 8px;
+    width:70px;
+    top:-4px;
+    right:-4px;
+  }
+}
+@media (max-width:400px){
+  #bookPage .poemQuill{
+    width:56px;
+    top:-2px;
+    right:-2px;
   }
 }
 #closeModal, #closeGame{
