@@ -51,8 +51,11 @@ const sections = [
   },
   {
     id:'coursework', title:'Scrolls of Study',
-    html:`<h2>Scrolls of Study</h2><p>Relevant coursework from my studies.</p>
-    <p>Software Verification &amp; Validation, Engineering Project Management, Machine Learning, Data Science, Bioinformatics, Graphic Design</p>`
+    html:`<h2>Scrolls of Study</h2><p>Electives I chose to explore beyond the core curriculum.</p>
+    <h3>Technical</h3>
+    <p>Machine Learning, Data Science, Bioinformatics, Software Verification &amp; Validation, Engineering Project Management</p>
+    <h3>Creative &amp; Humanities</h3>
+    <p>Graphic Design, Psychology, Screenwriting</p>`
   },
   {
     id:'languages', title:'Tongues of the Realm',
@@ -109,10 +112,19 @@ setTimeout(()=>{
 
 /* ============ HERO NAME (letter hover) ============ */
 const heroName = document.getElementById('heroName');
-MY_NAME.split('').forEach(ch=>{
-  const span = document.createElement('span');
-  span.textContent = ch === ' ' ? '\u00A0' : ch;
-  heroName.appendChild(span);
+const nameWords = MY_NAME.split(' ');
+nameWords.forEach((word, wi)=>{
+  const wordSpan = document.createElement('span');
+  wordSpan.className = 'nameWord';
+  word.split('').forEach(ch=>{
+    const letterSpan = document.createElement('span');
+    letterSpan.textContent = ch;
+    wordSpan.appendChild(letterSpan);
+  });
+  heroName.appendChild(wordSpan);
+  if(wi < nameWords.length - 1){
+    heroName.appendChild(document.createTextNode(' '));
+  }
 });
 
 /* ============ SCROLL HINT CLICK ============ */
