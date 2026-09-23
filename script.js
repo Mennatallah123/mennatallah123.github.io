@@ -13,7 +13,7 @@ const sections = [
     html:`<h2>Board of Quests</h2>
     <h3>Completed Quests</h3>
     <p><em>Sproutly</em> \u2014 a senior project mobile app. <a href="https://kaganrehber.github.io/CS491-Sproutly-webpage/" target="_blank" rel="noopener">Check its website</a></p>
-    <p class="subtleItalic">(Check my CV to see more of my projects.)</p>
+    <p class="subtleItalic">More projects and experience can be found in my CV.</p>
     <h3>Quests In Progress</h3>
     <p><em>Little Hollow</em> \u2014 a Unity project currently in development.</p>`
   },
