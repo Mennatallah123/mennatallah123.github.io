@@ -565,3 +565,95 @@ h1,h2,h3,.display{
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
 }
+
+/* ---------- QUESTS + SCREENSHOT GALLERIES ---------- */
+#bookPage .questBlock{ margin-bottom:1.1rem; }
+#bookPage .questBlock p{ margin:0 0 0.4rem; }
+
+#bookPage .seeShots,
+#bookPage .backBtn{
+  font-family:'Cinzel', serif;
+  font-size:0.8rem;
+  letter-spacing:0.03em;
+  cursor:pointer;
+  border-radius:4px;
+  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+#bookPage .questLink{ margin:0; }
+
+#bookPage .seeShots,
+#bookPage .backBtn{
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:600;
+  color:var(--emerald);
+  background:none;
+  border:none;
+  padding:0;
+  cursor:pointer;
+  text-decoration:underline;
+}
+#bookPage .seeShots:hover,
+#bookPage .backBtn:hover{
+  color:#3a5c4a;
+  text-decoration-thickness:2px;
+}
+#bookPage .backBtn{ display:inline-block; margin-bottom:0.8rem; }
+
+#bookPage .shotGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:1.2rem;
+  margin:1rem 0 1.6rem;
+}
+#bookPage .shotGrid.row3{
+  grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:0.9rem;
+}
+#bookPage .shotGrid.row3 .shot img{
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+  background:#fff;
+}
+#bookPage .shotGrid.grid2{
+  grid-template-columns:repeat(2, 1fr);
+  gap:1.2rem;
+}
+#bookPage .shot{ margin:0; }
+#bookPage .shot img{
+  width:100%;
+  margin:0 0 0.4rem;
+  padding:6px;
+  background:#f4ead4;
+  border:1px solid var(--gold);
+  box-shadow:0 6px 16px rgba(0,0,0,0.28);
+  cursor:zoom-in;
+  transition:transform 0.25s ease;
+}
+#bookPage .shot img:hover{ transform:scale(1.02) rotate(-0.4deg); }
+#bookPage .shot figcaption{
+  font-style:italic;
+  font-size:0.9rem;
+  color:#4A3A25;
+  text-align:center;
+}
+#bookPage .shot.wide{ grid-column:1 / -1; }
+@media (max-width:600px){
+  #bookPage .shot.small{ width:70%; }
+}
+
+/* click-to-enlarge */
+#lightbox{
+  position:fixed; inset:0;
+  background:rgba(5,4,3,0.92);
+  display:none; align-items:center; justify-content:center;
+  z-index:180;
+  padding:20px;
+  cursor:zoom-out;
+}
+#lightbox.open{ display:flex; }
+#lightbox img{
+  max-width:100%; max-height:100%;
+  border:2px solid var(--gold);
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
+}

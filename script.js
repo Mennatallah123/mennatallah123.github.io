@@ -12,8 +12,37 @@ const sections = [
     id:'quests', title:'Board of Quests',
     html:`<h2>Board of Quests</h2>
     <h3>Completed Quests</h3>
-    <p><em>Sproutly</em> \u2014 a senior project mobile app. <a href="https://kaganrehber.github.io/CS491-Sproutly-webpage/" target="_blank" rel="noopener">Check its website</a></p>
-    <p class="subtleItalic">More projects and experience can be found in my CV.</p>
+
+    <div class="questBlock">
+      <p><em>Sproutly</em> \u2014 a cross-platform AI-powered productivity app with smart task breakdown, focus sessions, and a gamified virtual companion.</p>
+      <p class="questLink"><a href="https://kaganrehber.github.io/CS491-Sproutly-webpage/" target="_blank" rel="noopener">View its website</a></p>
+    </div>
+
+    <div class="questBlock">
+      <p><em>MemoryTrip</em> \u2014 a forest-set mobile puzzle game prototype built in Unity within a 48-hour game jam.</p>
+      <p class="questLink"><button class="seeShots" type="button" data-gallery="memorytrip">See screenshots</button></p>
+    </div>
+
+    <div class="questBlock">
+      <p><em>Insect Species Classifier</em> \u2014 an image classification system comparing CNN, Random Forest, and SVM models.</p>
+      <p class="questLink"><button class="seeShots" type="button" data-gallery="insects">See screenshots</button></p>
+    </div>
+
+    <div class="questBlock">
+      <p><em>Campus Tour Portal</em> \u2014 a full-stack web app (Django + React) for Bilkent University's Information Office to manage campus tour requests, fair applications, and inquiries.</p>
+    </div>
+
+    <div class="questBlock">
+      <p><em>SecondWheels</em> \u2014 a full-stack second-hand vehicle marketplace for listings, transactions, and data management.</p>
+      <p class="questLink"><button class="seeShots" type="button" data-gallery="secondwheels">See screenshots</button></p>
+    </div>
+
+    <div class="questBlock">
+      <p><em>VirtuaIot</em> \u2014 a custom language for IoT devices, with lexical analysis and core parsing.</p>
+      <p class="questLink"><a href="https://github.com/Mennatallah123/Programming-Language-for-IoT-Devices-and-its-Lexical-Analyzer" target="_blank" rel="noopener">View on GitHub</a></p>
+    </div>
+
+    <p class="subtleItalic">Full project details and experience can be found in my <a href="assets/mennatallah-abouelenin-cv.pdf" target="_blank" rel="noopener">CV</a>.</p>
     <h3>Quests In Progress</h3>
     <p><em>Little Hollow</em> \u2014 a Unity project currently in development.</p>`
   },
@@ -23,7 +52,7 @@ const sections = [
     <h3>Programming Languages</h3>
     <p>C++, Java, Dart, Python, JavaScript, TypeScript, HTML/CSS, C, C#, SQL, Swift, SystemVerilog, R, Kotlin, PHP</p>
     <h3>Tools</h3>
-    <p>Visual Studio, Android Studio, RStudio, Xcode, Git, Jira, Google Colab, Gradio, Figma, Rive, Adobe Illustrator, Adobe Photoshop, Microsoft Office</p>
+    <p>Visual Studio, Android Studio, RStudio, MATLAB, Xcode, Git, Jira, Google Colab, Gradio, Figma, Rive, Adobe Illustrator, Adobe Photoshop, Microsoft Office</p>
     <h3>Frameworks &amp; Libraries</h3>
     <p>Flutter, React, React Native, Django, FastAPI, PyTorch, Unity, Node.js, LibGDX</p>
     <h3>Soft Skills</h3>
@@ -44,7 +73,7 @@ const sections = [
   {
     id:'treasury', title:'The Treasury',
     html:`<h2>The Treasury</h2><p>Where to find me and my work.</p>
-    <p><a href="assets/mennatallah-abouelenin-cv.pdf" download>Download my CV</a></p>
+    <p><a href="assets/mennatallah-abouelenin-cv.pdf" target="_blank" rel="noopener">View my CV</a> · <a href="assets/mennatallah-abouelenin-cv.pdf" download>Download</a></p>
     <p><a href="https://www.linkedin.com/in/mennatallah-abouelenin/" target="_blank" rel="noopener">LinkedIn</a></p>
     <p><a href="https://github.com/Mennatallah123" target="_blank" rel="noopener">GitHub</a></p>
     <p><a href="mailto:menna.ay.99@gmail.com">menna.ay.99@gmail.com</a></p>`
@@ -98,6 +127,46 @@ const secretScroll = {
   One with a happy ending, leaving readers wishing it could last.<br>
   One who lingers in writers' thoughts, vivid and surreal,<br>
   A muse for poets, making them believe it\u2019s all miraculously real.</p>`
+};
+
+/* Screenshot galleries — opened from the "See screenshots" buttons in the Quests book */
+const backBtn = `<button class="backBtn" type="button" data-back>\u2190 Back to the Board of Quests</button>`;
+
+const galleries = {
+  memorytrip: {
+    id:'gal-memorytrip', title:'MemoryTrip',
+    html:`${backBtn}
+    <h2>MemoryTrip</h2>
+    <p class="subtleItalic">Mobile puzzle game prototype \u2014 Unity, C#. Built in 48 hours.</p>
+    <div class="shotGrid grid2">
+      <figure class="shot"><img src="assets/memorytrip-1.jpeg" alt="MemoryTrip screenshot 1"><figcaption>Main Menu</figcaption></figure>
+      <figure class="shot"><img src="assets/memorytrip-2.jpeg" alt="MemoryTrip screenshot 2"><figcaption>Collecting an Item</figcaption></figure>
+      <figure class="shot"><img src="assets/memorytrip-3.jpg" alt="MemoryTrip screenshot 3"><figcaption>Exploring the Forest</figcaption></figure>
+      <figure class="shot"><img src="assets/memorytrip-4.jpg" alt="MemoryTrip screenshot 4"><figcaption>Animal Encounter</figcaption></figure>
+    </div>`
+  },
+  insects: {
+    id:'gal-insects', title:'Insect Species Classifier',
+    html:`${backBtn}
+    <h2>Insect Species Classifier</h2>
+    <p class="subtleItalic">Python, scikit-learn, OpenCV \u2014 three models, one dataset.</p>
+    <h3>Confusion Matrices</h3>
+    <div class="shotGrid row3">
+      <figure class="shot"><img src="assets/ai-cm-cnn.png" alt="CNN confusion matrix"><figcaption>CNN</figcaption></figure>
+      <figure class="shot"><img src="assets/ai-cm-rf.png" alt="Random Forest confusion matrix"><figcaption>Random Forest</figcaption></figure>
+      <figure class="shot"><img src="assets/ai-cm-svm.png" alt="SVM confusion matrix"><figcaption>SVM</figcaption></figure>
+    </div>`
+  },
+  secondwheels: {
+    id:'gal-secondwheels', title:'SecondWheels',
+    html:`${backBtn}
+    <h2>SecondWheels</h2>
+    <p class="subtleItalic">Second-hand vehicle marketplace \u2014 Django, React, MySQL.</p>
+    <div class="shotGrid">
+      <figure class="shot"><img src="assets/secondwheels-1.png" alt="SecondWheels screenshot 1"><figcaption>Vehicle Listings UI</figcaption></figure>
+      <figure class="shot"><img src="assets/secondwheels-2.png" alt="SecondWheels screenshot 2"><figcaption>Vehicle Page UI</figcaption></figure>
+    </div>`
+  }
 };
 
 /* ============ INTRO ANIMATION ============ */
@@ -266,6 +335,32 @@ function closeModalFn(){
 }
 document.getElementById('closeModal').addEventListener('click', closeModalFn);
 modalOverlay.addEventListener('click', (e)=>{ if(e.target===modalOverlay) closeModalFn(); });
+
+/* Gallery buttons, back button, and click-to-enlarge */
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+lightbox.innerHTML = '<img alt="">';
+document.body.appendChild(lightbox);
+lightbox.addEventListener('click', ()=> lightbox.classList.remove('open'));
+
+bookContent.addEventListener('click', (e)=>{
+  const galBtn = e.target.closest('[data-gallery]');
+  if(galBtn){
+    openBook(galleries[galBtn.dataset.gallery], false);
+    document.getElementById('bookPage').scrollTop = 0;
+    return;
+  }
+  if(e.target.closest('[data-back]')){
+    openBook(sections.find(s => s.id === 'quests'), false);
+    document.getElementById('bookPage').scrollTop = 0;
+    return;
+  }
+  const shot = e.target.closest('.shot img');
+  if(shot){
+    lightbox.querySelector('img').src = shot.src;
+    lightbox.classList.add('open');
+  }
+});
 
 /* ============ MINIGAME: MEMORY VAULT ============ */
 const gameOverlay = document.getElementById('gameOverlay');
