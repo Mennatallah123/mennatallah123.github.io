@@ -55,8 +55,10 @@ const sections = [
     <p>Visual Studio, Android Studio, RStudio, MATLAB, Xcode, Git, Jira, Google Colab, Gradio, Figma, Rive, Adobe Illustrator, Adobe Photoshop, Microsoft Office</p>
     <h3>Frameworks &amp; Libraries</h3>
     <p>Flutter, React, React Native, Django, FastAPI, PyTorch, Unity, Node.js, LibGDX</p>
+    <h3>Hardware &amp; Digital Systems</h3>
+    <p>Computer Architecture, Digital Design, FPGA Development (Basys 3), IT Support &amp; Troubleshooting</p>
     <h3>Soft Skills</h3>
-    <p>Teamwork, Public speaking, Problem-solving, Communication, Critical thinking, Creativity</p>`
+    <p>Problem-solving, Teamwork, Communication, Public speaking, Critical thinking, Adaptability, Creativity</p>`
   },
   {
     id:'medals', title:'Hall of Medals',
