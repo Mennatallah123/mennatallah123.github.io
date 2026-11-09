@@ -51,10 +51,10 @@ const sections = [
     html:`<h2>Tome of Skills</h2><p>A record of arts mastered on the road so far.</p>
     <h3>Programming Languages</h3>
     <p>C++, Java, Dart, Python, JavaScript, TypeScript, HTML/CSS, C, C#, SQL, Swift, SystemVerilog, R, Kotlin, PHP</p>
-    <h3>Tools</h3>
-    <p>Visual Studio, Android Studio, RStudio, MATLAB, Xcode, Git, Jira, Google Colab, Gradio, Figma, Rive, Adobe Illustrator, Adobe Photoshop, Microsoft Office</p>
+    <h3>Tools &amp; Technologies</h3>
+    <p>Visual Studio, Android Studio, RStudio, MATLAB, Xcode, Git, Jira, Docker, Vivado, Google Colab, Gradio, Figma, Rive, Adobe Illustrator, Adobe Photoshop, Microsoft Office</p>
     <h3>Frameworks &amp; Libraries</h3>
-    <p>Flutter, React, React Native, Django, FastAPI, PyTorch, Unity, Node.js, LibGDX</p>
+    <p>Flutter, React, React Native, Django, FastAPI, PyTorch, Unity, Next.js, Node.js, LibGDX</p>
     <h3>Hardware &amp; Digital Systems</h3>
     <p>Computer Architecture, Digital Design, FPGA Development (Basys 3), IT Support &amp; Troubleshooting</p>
     <h3>Soft Skills</h3>
@@ -163,7 +163,7 @@ const galleries = {
     id:'gal-secondwheels', title:'SecondWheels',
     html:`${backBtn}
     <h2>SecondWheels</h2>
-    <p class="subtleItalic">Second-hand vehicle marketplace \u2014 Django, React, MySQL.</p>
+    <p class="subtleItalic">Second-hand vehicle marketplace \u2014 Django, Next.js, PostgreSQL.</p>
     <div class="shotGrid">
       <figure class="shot"><img src="assets/secondwheels-1.png" alt="SecondWheels screenshot 1"><figcaption>Vehicle Listings UI</figcaption></figure>
       <figure class="shot"><img src="assets/secondwheels-2.png" alt="SecondWheels screenshot 2"><figcaption>Vehicle Page UI</figcaption></figure>
